@@ -15,14 +15,14 @@ const NavBar = () => {
                 </div>
 
                 <div className='flex gap-20 w-fit font-medium text-white'>
-                    <Link href='/home' className='font-bold'>Home</Link>
+                    <Link href='/' className='font-bold'>Home</Link>
                     <Link href='/messages'>Message overview</Link>
-                    <Link href='/saved'>Saved</Link>
-                    <Link href='/groups'>Groups</Link>
+                    <Link href='#'>Saved</Link>
+                    <Link href='#'>Groups</Link>
                 </div>
 
                 <div className='w-fit'>
-                    <svg width="30" height="30" viewBox="0 0 36 36" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                    <svg className='hover:cursor-pointer' width="30" height="30" viewBox="0 0 36 36" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18 0C8.07158 0 0 8.07158 0 18C0 27.9284 8.07158 36 18 36C27.9284 36 36 27.9284 36 18C36 8.07158 27.9284 0 18 0ZM18 7.88211C20.463 7.88211 22.4714 9.89053 22.4714 12.3535C22.4714 14.8166 20.463 16.825 18 16.825C15.537 16.825 13.5286 14.8166 13.5286 12.3535C13.5286 9.89053 15.537 7.88211 18 7.88211ZM25.3516 26.1853C25.3516 26.6021 25.0106 26.9812 24.5557 26.9812L11.4441 26.9809C11.0272 26.9809 10.6482 26.6399 10.6482 26.185V25.6545C10.6482 21.5996 13.9449 18.3029 17.9997 18.3029C22.0545 18.3029 25.3513 21.5997 25.3513 25.6545L25.3516 26.1853Z" fill="white" />
                     </svg>
                 </div>

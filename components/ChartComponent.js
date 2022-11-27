@@ -19,9 +19,9 @@ const DonutChart = ({ data }) => {
 
             </div>
             <div className="h-fit ml-5">
-                {data.map(obj => {
+                {data.map((obj, i) => {
                     return (
-                        <div className="h-5 w-5 my-2" style={{ backgroundColor: obj.color }}>
+                        <div key={i} className="h-5 w-5 my-2" style={{ backgroundColor: obj.color }}>
                             <p className="ml-7">{obj.name}</p>
                         </div>
                     )

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const NavBar = () => {
     return (
@@ -14,10 +15,10 @@ const NavBar = () => {
                 </div>
 
                 <div className='flex gap-20 w-fit font-medium text-white'>
-                    <a className='font-bold'>Home</a>
-                    <a href='/messages'>Message overview</a>
-                    <a href='/saved'>Saved</a>
-                    <a>Groups</a>
+                    <Link href='/home' className='font-bold'>Home</Link>
+                    <Link href='/messages'>Message overview</Link>
+                    <Link href='/saved'>Saved</Link>
+                    <Link href='/groups'>Groups</Link>
                 </div>
 
                 <div className='w-fit'>

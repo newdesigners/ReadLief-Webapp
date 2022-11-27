@@ -1,6 +1,6 @@
 import React from 'react'
 
-const message = () => {
+const message = ({ msg, count, tags }) => {
     return (
         <div className='w-full flex gap-10 mt-2 pt-10'>
             <div className='w-fit mr-auto flex flex-col gap-2 items-center justify-start'>
@@ -53,24 +53,31 @@ const message = () => {
                             <path d="M1455 2791 c-92 -41 -145 -126 -145 -231 0 -148 102 -250 250 -250 148 0 250 102 250 250 0 148 -102 250 -250 250 -42 0 -79 -7 -105 -19z" /> <path d="M2455 2791 c-92 -41 -145 -126 -145 -231 0 -148 102 -250 250 -250 148 0 250 102 250 250 0 148 -102 250 -250 250 -42 0 -79 -7 -105 -19z" /> <path d="M3455 2791 c-92 -41 -145 -126 -145 -231 0 -148 102 -250 250 -250 148 0 250 102 250 250 0 148 -102 250 -250 250 -42 0 -79 -7 -105 -19z" />
                         </g>
                     </svg>
-                    <p className='text-sm'>120</p>
+                    <p className='text-sm text-center'>{count}</p>
                 </div>
             </div>
 
-            <div className='flex flex-col'>
+            <div className='flex flex-col w-full justify-between'>
                 <div>
-                    <p className='-mt-1.5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue ligula nec nisi malesuada, a scelerisque ipsum rutrum. Vivamus porttitor rhoncus arcu, vel lacinia urna semper rhoncus. Nullam maximus venenatis libero, quis luctus ex condimentum at. Nulla ante massa, posuere ac molestie non, interdum id leo. Donec id elementum mi. Maecenas nec vestibulum elit. Curabitur at viverra nisi.</p>
+                    <p className='-mt-1.5'>{msg}</p>
                 </div>
 
                 <div className='mt-2 flex items-center'>
                     <div className='flex gap-4'>
-                        <div className='flex items-center border-2 border-appRed w-fit px-4 py-0.5 rounded-md'>
-                            <p className='text-appRed'>Shelter</p>
-                        </div>
 
-                        <div className='flex items-center border-2 border-black w-fit px-4 py-0.5 rounded-md'>
+                        {
+                            tags.map((tag, i) => {
+                                return (
+                                    <div key={Math.random()} className={'flex items-center border-2 border-appRed w-fit px-4 py-0.5 rounded-md ' + tag}>
+                                        <p className='text-black'>{tag}</p>
+                                    </div>
+                                )
+                            })
+                        }
+
+                        {/* <div className='flex items-center border-2 border-black w-fit px-4 py-0.5 rounded-md'>
                             <p className='text-black'>Payment</p>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className='ml-auto'>

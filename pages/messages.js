@@ -12,7 +12,7 @@ const Messages = () => {
 
     const [messages, setmessages] = useState([
         {
-            "msgContent": "Good day, help to find accommodation in Łódź for two girls with two children, 6 and 10 years old.",
+            "msgContent": "Good day, help to find accommodation in <LOCATION> for two girls with two children, 6 and 10 years old.",
             "count": 17,
             "tags": ["Accomodation"]
         }
@@ -31,12 +31,12 @@ const Messages = () => {
                 "tags": ["Accomodation", "Payment"]
             },
             {
-                "msgContent": "Good afternoon, I will rent a room/apartment for two women, in the Wroclaw area and around, preferably in the village 🙏",
+                "msgContent": "Good afternoon, I will rent a room/apartment for two women, in the <LOCATION> area and around, preferably in the village 🙏",
                 "count": 12,
                 "tags": ["Accomodation", "Payment"]
             },
             {
-                "msgContent": "Can you please tell me how to get from Helm to Dusseldorf?",
+                "msgContent": "Can you please tell me how to get from <LOCATION> to <LOCATION>?",
                 "count": 7,
                 "tags": ["Transportation"]
             },
@@ -46,7 +46,7 @@ const Messages = () => {
                 "tags": ["Transportation"]
             },
             {
-                "msgContent": "I am looking for housing for a fee, the city of Opole or Katowice",
+                "msgContent": "I am looking for housing for a fee, the city of <LOCATION> or <LOCATION>",
                 "count": 32,
                 "tags": ["Transportation"]
             },
@@ -61,7 +61,7 @@ const Messages = () => {
                 "tags": ["Transportation"]
             },
             {
-                "msgContent": "I am looking for a rented apartment for 3 people in the city of Poznan",
+                "msgContent": "I am looking for a rented apartment for 3 people in the city of <LOCATION>",
                 "count": 21,
                 "tags": ["Accomodation"]
             },
@@ -71,22 +71,22 @@ const Messages = () => {
                 "tags": ["Accomodation", "Job"]
             },
             {
-                "msgContent": "Good afternoon! Looking for housing and work in Chelm or Lublin",
+                "msgContent": "Good afternoon! Looking for housing and work in <LOCATION> or <LOCATION>",
                 "count": 34,
                 "tags": ["Accomodation", "Job"]
             },
             {
-                "msgContent": "Good day! I am looking for accommodation in Pleshevo for 3 adults and 4 small children.",
+                "msgContent": "Good day! I am looking for accommodation in <LOCATION> for 3 adults and 4 small children.",
                 "count": 23,
                 "tags": ["Accomodation"]
             },
             {
-                "msgContent": "I live in temporary housing in Warsaw. I and my two children, 16 and 4, are looking for a long-term, kindergarten, school and job.",
+                "msgContent": "I live in temporary housing in <LOCATION>. I and my two children, 16 and 4, are looking for a long-term, kindergarten, school and job.",
                 "count": 5,
                 "tags": ["Accomodation", "Job"]
             },
             {
-                "msgContent": "People are already in Poland, Grudzonz. We need somewhere to live, without animals. By car, they will come themselves. Children 7, 5, 3 years and 8 months. Two women are 36 and 31",
+                "msgContent": "People are already in Poland, <LOCATION>. We need somewhere to live, without animals. By car, they will come themselves.",
                 "count": 2,
                 "tags": ["Transportation", "Accomodation"]
             }
@@ -95,7 +95,7 @@ const Messages = () => {
         mainMessages.map((obj, i) => {
             setTimeout(() => {
                 add(obj)
-            }, (i + 1) * 3000);
+            }, (i + 1) * 1500);
         })
     }, [])
 
